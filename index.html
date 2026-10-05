@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keragaman Budaya Indonesiaku – PPT Interaktif Kelas 5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#EAF1FF;--surf:#FFFFFF;--surf2:#F2F6FF;--ink:#16204F;--mut:#4B5688;
+  --pri:#2336A0;--pri-ink:#FFFFFF;--acc:#F5B82E;--acc-ink:#3A2A00;
+  --red:#D8452E;--grn:#2E9A5E;--line:#C7D4F5;--motif:rgba(35,54,160,.07);
+  --okbg:#DDF5E7;--nobg:#FDE3DE;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1440;--surf:#19235E;--surf2:#141C52;--ink:#F2F5FF;--mut:#B5BFEA;
+    --pri:#3B4FD0;--line:#34428F;--motif:rgba(255,255,255,.05);--okbg:#17493A;--nobg:#5A2530;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1440;--surf:#19235E;--surf2:#141C52;--ink:#F2F5FF;--mut:#B5BFEA;
+  --pri:#3B4FD0;--line:#34428F;--motif:rgba(255,255,255,.05);--okbg:#17493A;--nobg:#5A2530;
+}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  height:100%;margin:0;font-family:'Nunito',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  font-size:clamp(16px,1.5vw,21px);line-height:1.5;color:var(--ink);background-color:var(--bg);
+  background-image:radial-gradient(circle at 0 0,var(--motif) 0 15px,transparent 16px),radial-gradient(circle at 44px 44px,var(--motif) 0 15px,transparent 16px);
+  background-size:44px 44px;
+}
+h1,h2,h3{font-family:'Baloo 2','Nunito',system-ui,sans-serif;line-height:1.15;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.app{height:100%;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--pri);color:#fff}
+.top .brand{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.1em;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .cnt{font-weight:800;opacity:.9;white-space:nowrap}
+.ib{border:0;background:rgba(255,255,255,.16);color:#fff;border-radius:12px;width:40px;height:40px;font-size:1.1em;display:grid;place-items:center}
+.ib:hover{background:rgba(255,255,255,.28)}
+.ib[aria-pressed="true"]{background:var(--acc);color:var(--acc-ink)}
+.bar{height:5px;background:rgba(255,255,255,.25)}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .25s}
+main{flex:1;overflow:auto;padding:20px 16px 28px;scroll-behavior:smooth}
+.slide{display:none;max-width:1120px;margin:0 auto}
+.slide.on{display:block}
+.stitle{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-left:14px;border-left:8px solid var(--sc,var(--pri))}
+.stitle .sic{font-size:2.1em;line-height:1}
+.stitle h1{font-size:clamp(1.6em,3.4vw,2.6em);font-weight:800}
+.stitle p{margin:2px 0 0;color:var(--mut)}
+.nav{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--surf);border-top:2px solid var(--line)}
+.nav .nb{border:0;border-radius:999px;padding:10px 20px;font-weight:800;background:var(--pri);color:#fff;min-width:104px}
+.nav .nb:disabled{opacity:.35;cursor:default}
+.dots{flex:1;display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.dots button{width:14px;height:14px;border-radius:50%;border:2px solid var(--pri);background:transparent;padding:0}
+.dots button.on{background:var(--pri)}
+.dots button.g{border-radius:4px}
+.card{background:var(--surf);border:2px solid var(--line);border-radius:18px;padding:14px 18px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr))}
+.pts{margin:0;padding-left:1.2em}
+.pts li{margin:.3em 0;font-size:1.08em}
+.btn{border:0;border-radius:999px;padding:10px 20px;font-weight:800;background:var(--pri);color:#fff}
+.btn.acc{background:var(--acc);color:var(--acc-ink)}
+.btn.ghost{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+:root[data-theme="dark"] .btn.ghost{color:#fff;border-color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.ghost{color:#fff;border-color:#fff}}
+.btn.ok{background:var(--grn)}.btn.no{background:var(--red)}
+.btn:disabled{opacity:.4;cursor:default}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.chip{display:inline-block;padding:4px 12px;border-radius:10px;background:var(--surf2);border:2px solid var(--line);font-weight:700;font-size:.92em}
+.mut{color:var(--mut)}
+.big{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:clamp(2.4em,7vw,5em);line-height:1}
+.center{text-align:center}
+.hide{display:none!important}
+.sub{font-size:1.2em;margin:0 0 8px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tab{border:2px solid var(--line);background:var(--surf);border-radius:12px;padding:8px 14px;font-weight:800}
+.tab.on{background:var(--tc,var(--pri));color:#fff;border-color:var(--tc,var(--pri))}
+.fb{min-height:1.6em;font-weight:800;margin-top:8px}
+.fb.ok{color:var(--grn)}.fb.no{color:var(--red)}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;margin-top:10px}
+.opt{border:2px solid var(--line);background:var(--surf);border-radius:14px;padding:12px;font-weight:800;text-align:center}
+.opt:hover:not(:disabled){border-color:var(--pri)}
+.opt.ok{background:var(--okbg);border-color:var(--grn)}
+.opt.no{background:var(--nobg);border-color:var(--red)}
+.qtext{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.45em;line-height:1.25}
+.hint{color:var(--mut);margin-top:4px}
+/* slide 1 */
+.hero{display:grid;gap:18px;grid-template-columns:1.1fr .9fr;align-items:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr}}
+.hero h2{font-size:clamp(2.2em,5.4vw,4.2em);font-weight:800;color:var(--pri)}
+:root[data-theme="dark"] .hero h2{color:#FFD76A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .hero h2{color:#FFD76A}}
+.kids{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-size:2.6em;padding:14px;border-radius:24px;background:linear-gradient(#CBE6FF,#E4F6D9);}
+.kids span{display:inline-block;animation:bob 2.4s ease-in-out infinite}
+.kids span:nth-child(2n){animation-delay:.4s}.kids span:nth-child(3n){animation-delay:.8s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.sing{background:var(--acc);color:var(--acc-ink);border-radius:18px;padding:16px;font-weight:800;text-align:center}
+.sing .note{font-size:2em;display:inline-block;animation:bob 1s infinite}
+textarea{width:100%;min-height:84px;border:2px solid var(--line);border-radius:12px;padding:8px 10px;font:inherit;background:var(--surf);color:var(--ink);resize:vertical}
+/* slide 2 */
+.numcard{position:relative;text-align:center;padding:20px 12px;border-radius:22px;color:#fff;overflow:hidden;min-height:190px}
+.numcard .ico{font-size:2em}
+.numcard .lbl{font-weight:800;font-size:1.1em}
+.numcard .cover{position:absolute;inset:0;border:0;border-radius:22px;background:var(--surf);color:var(--ink);font-family:'Baloo 2',sans-serif;font-weight:800;font-size:3.6em;display:grid;place-items:center;border:3px dashed var(--line)}
+.numcard .cover small{display:block;font-size:.25em;font-family:'Nunito',sans-serif;color:var(--mut)}
+.quote{border-left:6px solid var(--acc);padding:6px 14px;font-size:1.08em;background:var(--surf2);border-radius:0 12px 12px 0}
+.clap{font-size:2.4em;display:inline-block}
+.clap.pop{animation:pulse .5s}
+@keyframes pulse{40%{transform:scale(1.5) rotate(-8deg)}}
+/* slide 3 */
+.garden{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding:14px;border-radius:20px;background:linear-gradient(#DDF1FF,#CDEBC6)}
+.fl{border:0;background:transparent;padding:0;width:84px}
+.fl svg{width:100%;height:auto;transition:transform .2s}
+.fl:active svg{transform:scale(1.15) rotate(10deg)}
+.wordq span{opacity:.12;transition:opacity .3s}.wordq span.on{opacity:1}
+.timer{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tm-d{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:2.2em;min-width:3.4em}
+.tm-d.end{color:var(--red)}
+.poll b{font-size:1.6em}
+/* slide 4 */
+.prov{display:flex;flex-wrap:wrap;gap:8px}
+.undi{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:clamp(1.8em,4vw,3em);text-align:center;padding:18px;border-radius:20px;background:var(--surf2);border:3px dashed var(--line);min-height:1.8em}
+.bingo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.bcell{border:2px solid var(--line);background:var(--surf);border-radius:12px;padding:16px 6px;font-weight:800;text-align:center;min-height:68px}
+.bcell.on{background:var(--grn);color:#fff;border-color:var(--grn)}
+.sandi{display:flex;flex-wrap:wrap;gap:6px 22px}
+.word{display:flex;gap:4px}
+.sl{width:2.4em;height:2.8em;border:2px solid var(--line);border-radius:10px;background:var(--surf);display:grid;place-items:center;font-weight:800;position:relative}
+.sl.open{background:var(--acc);color:var(--acc-ink);border-color:var(--acc)}
+.sl small{position:absolute;top:1px;left:4px;font-size:.6em;color:var(--mut)}
+.sl.open small{color:var(--acc-ink)}
+/* slide 5 */
+.trow{display:grid;grid-template-columns:1.1fr 1.6fr 1.3fr;gap:8px;align-items:center;padding:10px 0;border-bottom:2px dashed var(--line)}
+.rev{border:2px dashed var(--line);background:var(--surf2);border-radius:10px;padding:6px 10px;text-align:left;color:var(--mut);font-weight:700;min-height:2.2em}
+.rev.open{border-style:solid;background:var(--okbg);color:var(--ink)}
+.blank{display:inline-block;min-width:4em;border:0;border-bottom:3px solid var(--acc);background:var(--surf2);font-weight:800;padding:0 8px;color:var(--ink);border-radius:6px 6px 0 0}
+.sapa{text-align:center}
+.sapa .w{font-family:'Baloo 2',sans-serif;font-size:2em;font-weight:800}
+/* slide 6/7/8 */
+.qbox{min-height:260px}
+.qtop{font-weight:800;color:var(--mut);margin-bottom:4px}
+.move{font-size:1.3em;font-weight:800;text-align:center;padding:16px;border-radius:16px;background:var(--surf2);border:2px dashed var(--line);min-height:3.4em}
+.bud{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;align-items:baseline}
+.bud dt{font-weight:800}.bud dd{margin:0}
+.pcard{border:0;border-radius:18px;padding:18px 10px;color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.2em;min-height:96px}
+.pcard small{display:block;font-family:'Nunito',sans-serif;font-weight:700;opacity:.9}
+.ctab{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px}
+.item{background:var(--surf2);border:2px solid var(--line);border-radius:14px;padding:10px 14px}
+.item b{display:block}
+.aud{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.aud input{display:none}
+.aud label{cursor:pointer}
+/* slide 9-11 */
+.chk{display:flex;align-items:center;gap:10px;padding:8px 12px;border:2px solid var(--line);border-radius:12px;background:var(--surf);font-weight:700}
+.chk input{width:22px;height:22px;accent-color:var(--grn)}
+.role{text-align:center;padding:12px 8px}
+.role .e{font-size:2em}
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.panel{border:3px solid var(--ink);border-radius:8px;background:var(--surf);padding:10px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between;text-align:center}
+.panel .sc{font-size:3em}
+.panel.hid{opacity:.15;filter:grayscale(1)}
+.qa{border:2px solid var(--line);background:var(--surf);border-radius:14px;padding:10px 14px;text-align:left;width:100%;font-weight:800}
+.qa .ans{display:none;font-weight:700;color:var(--mut);margin-top:6px}
+.qa.open .ans{display:block}
+.steps{display:grid;gap:10px}
+.step{border:0;text-align:left;border-radius:16px;padding:12px 16px;color:#fff;font-weight:800;font-size:1.1em;background:var(--sb)}
+.step span{display:none;font-weight:700;font-size:.9em;margin-top:4px}
+.step.open span{display:block}
+.karya{border:3px solid var(--line);background:var(--surf);border-radius:18px;padding:14px;text-align:center;font-weight:800}
+.karya.on{border-color:var(--pri);background:var(--surf2)}
+.karya .e{font-size:2.4em;display:block}
+.emo{border:3px solid var(--line);background:var(--surf);border-radius:18px;font-size:2.4em;padding:8px 14px}
+.emo.on{border-color:var(--acc);background:var(--acc)}
+/* games */
+.gamewrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:900px){.gamewrap{grid-template-columns:1fr}}
+.board{position:relative;width:100%;max-width:640px;aspect-ratio:1;margin:0 auto;border-radius:12px;overflow:hidden;border:3px solid var(--ink)}
+.board .cells{position:absolute;inset:0;display:grid;grid-template-columns:repeat(10,1fr);grid-template-rows:repeat(10,1fr)}
+.cell{font-size:clamp(8px,1.1vw,13px);font-weight:800;padding:2px 3px;color:#2a2a2a}
+.board svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.pion{position:absolute;width:5.5%;aspect-ratio:1;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5);transform:translate(-50%,-50%);transition:left .5s,top .5s;z-index:3;display:grid;place-items:center;font-size:.7em;font-weight:800;color:#fff}
+.dice{width:78px;height:78px;border-radius:16px;background:#fff;color:#222;border:3px solid var(--ink);display:grid;place-items:center;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:2.6em}
+.dice.roll{animation:shake .4s}
+@keyframes shake{25%{transform:rotate(-14deg)}75%{transform:rotate(14deg)}}
+.tchip{display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:12px;border:3px solid transparent;background:var(--surf2);font-weight:800}
+.tchip.cur{border-color:var(--acc)}
+.tchip i{width:16px;height:16px;border-radius:50%;display:inline-block}
+.kcard{border-radius:18px;padding:16px;border:3px solid var(--line);background:var(--surf)}
+.lvl{display:inline-block;border-radius:999px;padding:2px 12px;color:#fff;font-weight:800;font-size:.85em}
+.map{width:100%;max-width:560px;margin:0 auto;display:block}
+.ans{margin-top:8px;padding:10px 14px;border-radius:12px;background:var(--okbg);font-weight:700}
+.sheet{position:fixed;left:0;right:0;bottom:calc(64px + env(safe-area-inset-bottom,0px));max-height:42vh;overflow:auto;background:var(--acc);color:var(--acc-ink);padding:14px 18px;border-radius:20px 20px 0 0;z-index:20;box-shadow:0 -6px 18px rgba(0,0,0,.25)}
+.sheet h3{margin-bottom:4px}
+.menu{position:fixed;inset:0;z-index:30;background:rgba(10,14,50,.72);display:grid;place-items:center;padding:16px}
+.menu .box{background:var(--surf);border-radius:22px;padding:18px;max-width:560px;width:100%;max-height:86vh;overflow:auto}
+.menu button.m{display:flex;gap:10px;align-items:center;width:100%;text-align:left;border:0;background:var(--surf2);border-radius:12px;padding:10px 12px;margin:5px 0;font-weight:800}
+.menu button.m.on{outline:3px solid var(--acc)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}main{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand">🇮🇩 Keragaman Budaya Indonesiaku</div>
+    <div class="cnt" id="cnt">1 / 14</div>
+    <button class="ib" id="bMenu" title="Daftar slide" aria-label="Daftar slide">☰</button>
+    <button class="ib" id="bNote" title="Naskah guru (N)" aria-label="Naskah guru" aria-pressed="false">🗒️</button>
+    <button class="ib" id="bSnd" title="Suara" aria-label="Suara" aria-pressed="true">🔊</button>
+    <button class="ib" id="bTheme" title="Terang/gelap" aria-label="Ganti tema">🌓</button>
+    <button class="ib" id="bFs" title="Layar penuh (F)" aria-label="Layar penuh">⛶</button>
+  </header>
+  <div class="bar"><i id="prog"></i></div>
+  <main id="main"></main>
+  <div class="sheet hide" id="sheet" role="note"><h3>Naskah guru</h3><div id="sheetTxt"></div></div>
+  <nav class="nav">
+    <button class="nb" id="bPrev">◀ Kembali</button>
+    <div class="dots" id="dots"></div>
+    <button class="nb" id="bNext">Lanjut ▶</button>
+  </nav>
+</div>
+<div class="menu hide" id="menu"><div class="box"><h2 style="margin-bottom:8px">Daftar slide</h2><div id="menuList"></div><button class="btn" id="menuX" style="margin-top:10px">Tutup</button></div></div>
+
+<script>
+/* ===== utilitas ===== */
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const shuffle = a => { a = [...a]; for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const rnd = n => Math.floor(Math.random()*n);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let soundOn = true, AC;
+function tone(f,d=.15,t='sine',v=.14,when=0){ if(!soundOn) return; try{ AC=AC||new (window.AudioContext||window.webkitAudioContext)(); const o=AC.createOscillator(), g=AC.createGain(); o.type=t; o.frequency.value=f; o.connect(g); g.connect(AC.destination); const s=AC.currentTime+when; g.gain.setValueAtTime(v,s); g.gain.exponentialRampToValueAtTime(.001,s+d); o.start(s); o.stop(s+d+.02);}catch(e){} }
+const sfx = { ok(){tone(660,.12);tone(880,.2,'sine',.14,.12)}, no(){tone(200,.28,'sawtooth',.07)}, pop(){tone(520,.08,'triangle')}, fan(){[523,659,784,1046].forEach((f,i)=>tone(f,.22,'triangle',.11,i*.1))}, dice(){for(let i=0;i<5;i++)tone(300+rnd(300),.05,'square',.05,i*.06)} };
+function countUp(node,to,ms=1300){ if(reduce){node.textContent=to.toLocaleString('id-ID');return;} const t0=performance.now(); (function f(t){ const p=Math.min(1,(t-t0)/ms); node.textContent=Math.round(to*(1-Math.pow(1-p,3))).toLocaleString('id-ID'); if(p<1) requestAnimationFrame(f); })(t0); }
+function timerHTML(){ return `<div class="timer"><span class="tm-d" role="timer">00:00</span><button class="btn tm-s">Mulai / jeda</button><button class="btn ghost tm-r">Ulang</button></div>`; }
+function timer(root,sec){ let left=sec, iv=null; const d=$('.tm-d',root); const draw=()=>d.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0'); draw();
+  $('.tm-s',root).onclick=()=>{ if(iv){clearInterval(iv);iv=null;return;} iv=setInterval(()=>{ left--; draw(); if(left<=0){clearInterval(iv);iv=null;sfx.fan();d.classList.add('end');} },1000); };
+  $('.tm-r',root).onclick=()=>{ clearInterval(iv); iv=null; left=sec; draw(); d.classList.remove('end'); }; }
+function quiz(box,items,opt={}){
+  let i=0, score=0, list=[...items];
+  function show(){
+    if(i>=list.length){ box.innerHTML=`<div class="center"><div class="big">🎉</div><p class="sub">Skor kelas: <b>${score}</b> dari ${list.length} (dijawab benar pada percobaan pertama)</p><button class="btn" data-r>Main lagi</button></div>`; sfx.fan(); $('[data-r]',box).onclick=()=>{i=0;score=0;list=shuffle(items);show();}; return; }
+    const it=list[i]; let tried=false;
+    box.innerHTML=`<div class="qtop">Soal ${i+1} dari ${list.length}</div><div class="qtext">${it.q}</div>${it.hint?`<div class="hint">${it.hint}</div>`:''}<div class="extra"></div><div class="opts">${shuffle(it.opts).map(o=>`<button class="opt">${o}</button>`).join('')}</div><div class="fb" aria-live="polite"></div><div class="row" style="margin-top:8px"></div>`;
+    if(opt.extra) opt.extra($('.extra',box),it);
+    $$('.opt',box).forEach(b=>b.onclick=()=>{
+      if(b.textContent===it.a){ b.classList.add('ok'); $$('.opt',box).forEach(x=>x.disabled=true); $('.fb',box).className='fb ok'; $('.fb',box).textContent='Benar! '+(it.why||''); sfx.ok(); if(!tried) score++;
+        const n=document.createElement('button'); n.className='btn acc'; n.textContent=i+1<list.length?'Soal berikutnya':'Lihat skor'; n.onclick=()=>{i++;show();}; $('.row',box).append(n); }
+      else { tried=true; b.classList.add('no'); b.disabled=true; $('.fb',box).className='fb no'; $('.fb',box).textContent='Belum tepat, coba lagi!'; sfx.no(); }
+    });
+  }
+  show();
+}
+
+/* ===== data ===== */
+const PULAU=[
+ {n:'Sumatera',c:'#2E9A5E',e:'🐘',p:['Aceh','Sumatera Utara','Sumatera Barat','Riau','Kepulauan Riau','Jambi','Sumatera Selatan','Kep. Bangka Belitung','Bengkulu','Lampung']},
+ {n:'Jawa',c:'#C99700',e:'🌋',p:['DKI Jakarta','Jawa Barat','Banten','Jawa Tengah','DI Yogyakarta','Jawa Timur']},
+ {n:'Bali & Nusa Tenggara',c:'#2F80ED',e:'🏝️',p:['Bali','Nusa Tenggara Barat','Nusa Tenggara Timur']},
+ {n:'Kalimantan',c:'#E8751A',e:'🦧',p:['Kalimantan Barat','Kalimantan Tengah','Kalimantan Selatan','Kalimantan Timur','Kalimantan Utara']},
+ {n:'Sulawesi',c:'#8E5BD1',e:'⛵',p:['Sulawesi Utara','Gorontalo','Sulawesi Tengah','Sulawesi Barat','Sulawesi Selatan','Sulawesi Tenggara']},
+ {n:'Maluku',c:'#D6456F',e:'🌴',p:['Maluku','Maluku Utara']},
+ {n:'Papua',c:'#8B5E3C',e:'🦜',p:['Papua','Papua Barat','Papua Barat Daya','Papua Selatan','Papua Tengah','Papua Pegunungan']}
+];
+const ALLP=PULAU.flatMap(x=>x.p);
+const BUD={
+ 'Gorontalo':{c:'#2E9A5E',mk:'Binte Buluhuta',mn:'Omu',sj:'Baladu',rm:'Dulohupa',tr:'Tari Saronde',am:'Polopalo',lg:'Hulandalo Lipu’u'},
+ 'Maluku':{c:'#D8452E',mk:'Ikan Kuah Pala Banda',mn:'Air guraka',sj:'Parang Salawaku',rm:'Baileo',tr:'Tari Cakelele',am:'Tahuri',lg:'Rasa Sayange'},
+ 'Lampung':{c:'#2F80ED',mk:'Pandap, Seruit',mn:'Es Serbat Kweni',sj:'Badik Lampung',rm:'Nuwou Sesat',tr:'Tari Sembah',am:'Kulintang Pring',lg:'Sang Bumi Ruwa Jurai'},
+ 'Kalimantan Utara':{c:'#E8751A',mk:'Lawa',mn:'Kopi Malinau',sj:'Mandau',rm:'Baloy',tr:'Tari Lalatip',am:'Jatung Utang',lg:'Bebilin'},
+ 'Jawa Timur':{c:'#C99700',mk:'Sate Madura',mn:'Es Batil',sj:'Clurit',rm:'Joglo',tr:'Tari Jaranan',am:'Bonang',lg:'Rek Ayo Rek'},
+ 'Nusa Tenggara Timur':{c:'#8E5BD1',mk:'Se’i',mn:'Susu kuda liar',sj:'Tombak',rm:'Musalaki',tr:'Tari Bonet',am:'Sasando',lg:'Potong Bebek Angsa'}
+};
+const JENIS=[['mk','🍲','Makanan'],['mn','🥤','Minuman'],['sj','🛡️','Senjata'],['rm','🏠','Rumah'],['tr','💃','Tarian'],['am','🎶','Alat musik'],['lg','🎤','Lagu daerah']];
+const SIAPA={
+ 'Gorontalo':['Polopalo','Dulohupa','Tari Saronde'],'Maluku':['Tahuri','Parang Salawaku','Rasa Sayange'],
+ 'Lampung':['Kulintang Pring','Nuwou Sesat','Badik Lampung'],'Kalimantan Utara':['Jatung Utang','Tari Lalatip','Mandau'],
+ 'Jawa Timur':['Bonang','Clurit','Sate Madura'],'Nusa Tenggara Timur':['Musalaki','Se’i','Sasando']
+};
+const P6=Object.keys(BUD);
+const CARDS=[
+ ['Mudah','Ada berapa provinsi di Indonesia?','38 provinsi.'],
+ ['Mudah','Apa arti “Bhinneka Tunggal Ika”?','Berbeda-beda tetapi tetap satu jua.'],
+ ['Mudah','Alat musik dari NTT yang bentuknya seperti harpa dari daun lontar bernama ...','Sasando.'],
+ ['Mudah','Rasa Sayange adalah lagu daerah dari provinsi ...','Maluku.'],
+ ['Mudah','Persatuan Indonesia adalah sila ke berapa dalam Pancasila?','Sila ke-3.'],
+ ['Sedang','Sebutkan satu rumah tradisional dari Maluku!','Baileo.'],
+ ['Sedang','Senjata tradisional dari Kalimantan Utara bernama ...','Mandau.'],
+ ['Sedang','Tari Saronde berasal dari provinsi ...','Gorontalo.'],
+ ['Sedang','Sebutkan makanan khas dari Jawa Timur yang berupa sate!','Sate Madura.'],
+ ['Sedang','Air guraka adalah minuman khas dari provinsi ...','Maluku.'],
+ ['Sedang','Sebutkan 3 tarian tradisional dari Pulau Sumatera!','Contoh: Saman (Aceh), Tor-tor (Sumatera Utara), Piring (Sumatera Barat), Sembah (Lampung). Terima jawaban benar lain.'],
+ ['Sedang','Joglo, Dulohupa, dan Baloy adalah contoh keragaman budaya apa?','Rumah tradisional (Jawa Timur, Gorontalo, Kalimantan Utara).'],
+ ['Sulit','Sebutkan satu alat musik tradisional dan provinsi asalnya!','Contoh: Tahuri (Maluku), Bonang (Jawa Timur), Polopalo (Gorontalo), Kulintang Pring (Lampung), Jatung Utang (Kalimantan Utara).'],
+ ['Sulit','Apa sikap teman-teman Aisyah ketika ia terluka saat gladi bersih?','Saling menolong, peduli, inklusif, bergotong royong (mengajaknya tetap tampil sambil duduk).'],
+ ['Sulit','Mengapa kita perlu melestarikan budaya daerah?','Jawaban terbuka: agar tidak hilang, jadi identitas bangsa, diwariskan ke generasi berikutnya, memperkuat persatuan.'],
+ ['Sulit','Jelaskan mengapa perbedaan budaya bukan alasan untuk bertengkar!','Jawaban terbuka: perbedaan adalah kekayaan, kita satu bangsa (Bhinneka Tunggal Ika), toleransi membuat kita bersatu.']
+];
+const LVC={Mudah:'#2E9A5E',Sedang:'#C99700',Sulit:'#D8452E',Tantangan:'#8E5BD1'};
+const KAL=[
+ {kota:'Pontianak',prov:'Kalimantan Barat',lv:'Mudah',q:'Kota ini dilalui garis khatulistiwa dan punya sebuah tugu terkenal. Apa nama tugu itu?',a:'Tugu Khatulistiwa.',h:'Nama tugu berkaitan dengan garis khayal yang membagi bumi.',x:78,y:150},
+ {kota:'Palangka Raya',prov:'Kalimantan Tengah',lv:'Mudah',q:'Palangka Raya adalah ibu kota provinsi apa?',a:'Kalimantan Tengah.',h:'Lihat peta: provinsi di tengah pulau.',x:150,y:212},
+ {kota:'Banjarmasin',prov:'Kalimantan Selatan',lv:'Sedang',q:'Di kota ini ada pasar yang pedagangnya berjualan di atas perahu. Apa nama pasar itu dan di provinsi mana kota ini berada?',a:'Pasar terapung; Kalimantan Selatan.',h:'Pasar ini ada di atas sungai.',x:236,y:250},
+ {kota:'Samarinda',prov:'Kalimantan Timur',lv:'Sulit',q:'Kota ini ibu kota provinsi apa, dan sungai besar apa yang mengalir di dekatnya?',a:'Kalimantan Timur; Sungai Mahakam.',h:'Nama sungai diawali huruf M.',x:292,y:132},
+ {kota:'Tanjung Selor',prov:'Kalimantan Utara',lv:'Tantangan',q:'Kota ini ibu kota Kalimantan Utara. Sebutkan satu rumah tradisional, satu senjata, satu tarian daerah ini, lalu satu cara kamu melestarikan budaya daerah!',a:'Rumah Baloy; senjata Mandau; Tari Lalatip. Cara melestarikan: jawaban terbuka (belajar, praktik, menampilkan, memperkenalkan).',h:'Lihat kartu provinsi di Slide 8.',x:262,y:48}
+];
+const TEAMC=['#D8452E','#2F80ED','#2E9A5E','#C99700','#8E5BD1','#D6456F'];
+const TEAMN=['Merah','Biru','Hijau','Kuning','Ungu','Merah muda'];
+
+/* ===== slide ===== */
+const S=[];
+
+/* 1 */
+S.push({t:'Seberagam Apa Budaya Indonesia?',ic:'🗺️',col:'#2336A0',
+note:'Selamat pagi, anak-anak hebat! Hari ini kita berkeliling Indonesia dari Sabang sampai Merauke, tanpa naik pesawat. Lihat anak-anak di layar, pakaian mereka berbeda-beda. Menurut kalian, mereka dari daerah yang sama atau berbeda? Itulah pertanyaan kita hari ini. Sebelum berangkat, mari berdiri dan menyanyikan “Dari Sabang Sampai Merauke”. Setelah itu, isi dua kolom pertama tabel Refleksi Awal.',
+html:`<div class="hero"><div><h2>Keragaman Budaya Indonesiaku</h2><p class="sub">Seberagam apa budaya Indonesia?</p>
+<ul class="pts"><li>Kita akan mengenal budaya daerah</li><li>Kita akan menampilkan satu seni daerah</li><li>Ayo bernyanyi: “Dari Sabang Sampai Merauke”</li></ul>
+<div class="row" style="margin-top:14px"><button class="btn acc" id="sing">🎵 Nyanyi bareng</button></div></div>
+<div class="kids" aria-hidden="true"><span>👧🏽</span><span>🧒🏻</span><span>👦🏾</span><span>👧🏼</span><span>🧒🏽</span><span>👦🏻</span><span>👧🏿</span><span>🧒🏾</span></div></div>
+<div class="sing hide" id="singBox" style="margin-top:14px"><span class="note">🎵</span> Berdiri, tegakkan badan, nyanyikan lantang: <b>Dari Sabang Sampai Merauke</b>! Guru memandu nada, teman-teman menepuk irama.</div>
+<h3 style="margin:18px 0 8px">Refleksi Awal</h3>
+<div class="grid g2"><div><label for="r1"><b>Hal yang sudah saya ketahui</b></label><textarea id="r1" placeholder="Tulis di sini..."></textarea></div><div><label for="r2"><b>Hal yang ingin saya ketahui</b></label><textarea id="r2" placeholder="Tulis di sini..."></textarea></div></div>
+<p class="mut">Kolom ketiga (“Hal yang saya pelajari”) diisi di slide 12.</p>`,
+init(r){ $('#sing',r).onclick=()=>{ $('#singBox',r).classList.toggle('hide'); sfx.fan(); }; }});
+
+/* 2 */
+S.push({t:'Bangga Jadi Anak Indonesia!',ic:'🇮🇩',col:'#D8452E',
+note:'Coba tebak, ada berapa suku bangsa di Indonesia? Tulis tebakanmu, lalu kita buka jawabannya satu per satu. Wow, 1.340 suku bangsa, 718 bahasa daerah, di 38 provinsi. Pada 1 Juni 1945, Bung Karno menyampaikan bahwa yang kita punya adalah kebangsaan Indonesia, bukan kebangsaan satu pulau atau satu suku. Ini sesuai sila ke-3, Persatuan Indonesia. Siapa yang bangga jadi anak Indonesia? Ayo kita tepuk bersama!',
+html:`<p class="sub">Ketuk kartu bertanda “?” untuk membuka jawabannya.</p>
+<div class="grid g3">
+<div class="numcard" style="background:#D8452E"><div class="ico">🧑‍🤝‍🧑</div><div class="big" data-to="1340">1.340</div><div class="lbl">suku bangsa</div><button class="cover" aria-label="Buka jumlah suku bangsa">?<small>ketuk untuk membuka</small></button></div>
+<div class="numcard" style="background:#B07D00"><div class="ico">💬</div><div class="big" data-to="718">718</div><div class="lbl">bahasa daerah</div><button class="cover" aria-label="Buka jumlah bahasa daerah">?<small>ketuk untuk membuka</small></button></div>
+<div class="numcard" style="background:#2E9A5E"><div class="ico">📍</div><div class="big" data-to="38">38</div><div class="lbl">provinsi</div><button class="cover" aria-label="Buka jumlah provinsi">?<small>ketuk untuk membuka</small></button></div></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card center"><p class="sub" style="margin:0"><b>Banyak suku, satu bangsa Indonesia!</b></p><button class="btn acc" id="clapBtn" style="margin-top:8px">Tepuk “Bangga Indonesia”</button><div class="clap" id="clap" aria-hidden="true">👏</div></div>
+<div class="card"><button class="btn ghost" id="qBtn">📜 Pidato 1 Juni 1945</button><div class="quote hide" id="qBox" style="margin-top:8px">Bung Karno menegaskan: yang kita miliki adalah <b>kebangsaan Indonesia</b>, bukan kebangsaan satu pulau atau satu suku saja. <span class="mut">(Sila ke-3: Persatuan Indonesia)</span></div></div></div>`,
+init(r){ $$('.numcard',r).forEach(c=>{ const big=$('.big',c); const to=+big.dataset.to; big.textContent='0'; $('.cover',c).onclick=()=>{ $('.cover',c).remove(); sfx.ok(); countUp(big,to); }; });
+  $('#clapBtn',r).onclick=()=>{ const c=$('#clap',r); c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); [0,1,2].forEach(i=>tone(180,.07,'square',.08,i*.25)); };
+  $('#qBtn',r).onclick=()=>$('#qBox',r).classList.toggle('hide'); }});
+
+/* 3 */
+S.push({t:'Berbeda-beda Tetapi Tetap Satu',ic:'🦅',col:'#C99700',
+note:'Bayangkan sebuah kebun penuh bunga. Kalau semua bunganya sama warna, apakah seindah kebun yang warna-warni? Ketuk bunganya! Begitu juga Indonesia: perbedaan kita adalah keindahan. Semboyan kita Bhinneka Tunggal Ika, berbeda-beda tetapi tetap satu jua. Gus Dur berpesan: makin tinggi ilmu seseorang, makin besar toleransinya. Setuju atau belum setuju? Berdiri jika setuju, duduk jika belum.',
+html:`<div class="grid g2"><div class="card center"><div style="font-size:4em">🦅</div><h2 style="color:var(--pri)">Bhinneka Tunggal Ika</h2><p class="sub">berbeda-beda tetapi <b>tetap satu jua</b></p><p class="mut">Perbedaan adalah kekayaan bangsa.</p></div>
+<div class="card"><button class="btn acc" id="gus">💬 Kutipan Abdurrahman Wahid</button><p class="quote wordq hide" id="gusT" style="margin-top:10px;font-size:1.2em"></p></div></div>
+<h3 style="margin:16px 0 6px">Kebun bunga Indonesia</h3><p class="mut" style="margin:0 0 8px">Ketuk bunga untuk mengganti warnanya.</p>
+<div class="garden" id="garden"></div><div class="fb" id="gfb" style="text-align:center"></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card poll"><h3>Ayo, Berpendapat</h3><p class="mut" style="margin:2px 0 8px">Setuju dengan kutipan tadi?</p><div class="row"><button class="btn ok" id="ps">Setuju: <b id="cs">0</b></button><button class="btn" style="background:#6B6FA8" id="pb">Belum setuju: <b id="cb">0</b></button></div></div>
+<div class="card"><h3>Waktu berpendapat (3 menit)</h3><div id="tm3">${timerHTML()}</div></div></div>`,
+init(r){
+  const words='“Semakin tinggi ilmu seseorang, semakin besar rasa toleransinya.”'.split(' ');
+  const g=$('#gusT',r); g.innerHTML=words.map(w=>`<span>${w}</span>`).join(' ');
+  $('#gus',r).onclick=()=>{ g.classList.remove('hide'); const sp=$$('span',g); sp.forEach(s=>s.classList.remove('on')); sp.forEach((s,i)=>setTimeout(()=>{s.classList.add('on');tone(400+i*30,.05,'triangle',.05)},reduce?0:i*260)); g.insertAdjacentHTML('beforeend',''); };
+  const cols=['#9AA3B8','#E0457B','#F5B82E','#2F80ED','#2E9A5E','#8E5BD1','#E8751A'];
+  const st=[0,0,0,0,0];
+  const fl=i=>`<svg viewBox="0 0 80 100" aria-hidden="true"><rect x="38" y="48" width="4" height="48" fill="#2E8B4F"/><ellipse cx="28" cy="78" rx="12" ry="5" fill="#2E8B4F" transform="rotate(-25 28 78)"/>${[0,72,144,216,288].map(a=>`<ellipse cx="40" cy="22" rx="11" ry="17" fill="${cols[st[i]]}" transform="rotate(${a} 40 38)"/>`).join('')}<circle cx="40" cy="38" r="9" fill="#FFF2B3"/></svg>`;
+  const gd=$('#garden',r);
+  function draw(){ gd.innerHTML=st.map((_,i)=>`<button class="fl" data-i="${i}" aria-label="Bunga ${i+1}">${fl(i)}</button>`).join(''); $$('.fl',gd).forEach(b=>b.onclick=()=>{ const i=+b.dataset.i; st[i]=(st[i]%(cols.length-1))+1; sfx.pop(); draw(); const set=new Set(st); const fb=$('#gfb',r); if(!st.includes(0)&&set.size===5){ fb.className='fb ok'; fb.textContent='Lihat! Kebun yang warna-warni jauh lebih indah. Begitu juga Indonesia.'; sfx.fan(); } else { fb.textContent=''; } }); }
+  draw();
+  let a=0,b=0; $('#ps',r).onclick=()=>{ $('#cs',r).textContent=++a; sfx.pop(); }; $('#pb',r).onclick=()=>{ $('#cb',r).textContent=++b; sfx.pop(); };
+  timer($('#tm3',r),180); }});
+
+/* 4 */
+S.push({t:'Menjelajah Peta 38 Provinsi',ic:'📍',col:'#2E9A5E',
+note:'Ini peta Indonesia kita. Ada pulau besar apa saja? Sumatera, Jawa, Kalimantan, Sulawesi, Papua, dan lainnya. Semuanya terbagi menjadi 38 provinsi. Sekarang kita main Bingo Provinsi: gambar kotak 3 kali 2, tulis enam provinsi, aku akan mengundi nama provinsi. Yang pertama selesai satu baris berteriak BINGO! Untuk yang suka teka-teki, ada sandi rahasia angka 1 sampai 26.',
+html:`<ul class="pts"><li>Indonesia punya <b>38 provinsi</b>, dari Sabang sampai Merauke</li><li>Setiap provinsi punya ciri budaya sendiri</li><li>Ayo main: <b>Bingo Provinsi</b> dan <b>Sandi Angka</b></li></ul>
+<h3 style="margin:14px 0 8px">Pilih pulau</h3><div class="tabs" id="ptabs"></div><div class="card"><div class="prov" id="plist"></div></div>
+<div class="grid g2" style="margin-top:14px">
+<div class="card"><h3>Undi provinsi</h3><div class="undi" id="undi" aria-live="polite">Siap diundi?</div><div class="row" style="margin-top:10px"><button class="btn acc" id="bUndi">🎲 Undi!</button><button class="btn ghost" id="bUndiR">Ulang dari awal</button><span class="mut" id="uCnt"></span></div></div>
+<div class="card"><h3>Bingo Provinsi</h3><p class="mut" style="margin:2px 0 8px">Kartu berisi 6 provinsi (3 × 2). Provinsi yang diundi otomatis ditandai. Satu baris penuh = BINGO!</p><div class="bingo" id="bingo"></div><div class="fb" id="bfb" aria-live="polite"></div><button class="btn ghost" id="bNew" style="margin-top:6px">Kartu baru</button></div></div>
+<div class="card" style="margin-top:14px"><h3>Sandi Angka (1 = A ... 26 = Z)</h3><p class="mut" style="margin:2px 0 10px">Ketuk kotak untuk membuka hurufnya. Pertanyaan apa yang tersembunyi?</p><div class="sandi" id="sandi"></div><div class="row" style="margin-top:10px"><button class="btn ghost" id="sAll">Buka semua</button></div><p class="mut" style="margin:8px 0 0">Bahas jawabannya sesuai informasi resmi terbaru.</p></div>`,
+init(r){
+  const tb=$('#ptabs',r), pl=$('#plist',r);
+  tb.innerHTML=PULAU.map((p,i)=>`<button class="tab" data-i="${i}" style="--tc:${p.c}">${p.e} ${p.n} (${p.p.length})</button>`).join('');
+  const show=i=>{ $$('.tab',tb).forEach((b,j)=>b.classList.toggle('on',i===j)); pl.innerHTML=PULAU[i].p.map(x=>`<span class="chip">${x}</span>`).join(''); };
+  $$('.tab',tb).forEach(b=>b.onclick=()=>{ show(+b.dataset.i); sfx.pop(); }); show(0);
+  let pool=shuffle(ALLP), used=[]; const cnt=()=>$('#uCnt',r).textContent=`${used.length} dari ${ALLP.length} sudah keluar`; cnt();
+  let card=[], marks=[];
+  function drawBingo(){ $('#bingo',r).innerHTML=card.map((x,i)=>`<button class="bcell ${marks[i]?'on':''}" data-i="${i}">${x}</button>`).join(''); $$('.bcell',r).forEach(b=>b.onclick=()=>{ marks[+b.dataset.i]=!marks[+b.dataset.i]; drawBingo(); check(); }); }
+  function check(){ const row=[[0,1,2],[3,4,5]].some(rw=>rw.every(i=>marks[i])); const fb=$('#bfb',r); if(row){ fb.className='fb ok'; fb.textContent='🎉 BINGO!'; sfx.fan(); } else { fb.className='fb'; fb.textContent=''; } }
+  function newCard(){ card=shuffle(ALLP).slice(0,6); marks=card.map(()=>false); drawBingo(); check(); }
+  newCard(); $('#bNew',r).onclick=newCard;
+  $('#bUndi',r).onclick=()=>{ if(!pool.length){ $('#undi',r).textContent='Semua provinsi sudah keluar!'; return; } const p=pool.pop(); used.push(p); $('#undi',r).textContent=p; sfx.pop(); cnt(); const i=card.indexOf(p); if(i>=0){ marks[i]=true; drawBingo(); check(); } };
+  $('#bUndiR',r).onclick=()=>{ pool=shuffle(ALLP); used=[]; $('#undi',r).textContent='Siap diundi?'; cnt(); };
+  const code=[[1,16,1],[9,2,21,11,15,20,1],[9,14,4,15,14,5,19,9,1]];
+  $('#sandi',r).innerHTML=code.map(w=>`<div class="word">${w.map(n=>`<button class="sl" data-n="${n}" aria-label="Angka ${n}"><small>${n}</small><span>?</span></button>`).join('')}</div>`).join('');
+  const open=b=>{ if(b.classList.contains('open')) return; b.classList.add('open'); $('span',b).textContent=String.fromCharCode(64+ +b.dataset.n); };
+  $$('.sl',r).forEach(b=>b.onclick=()=>{ open(b); sfx.pop(); }); $('#sAll',r).onclick=()=>{ $$('.sl',r).forEach(open); sfx.ok(); }; }});
+
+/* 5 */
+S.push({t:'Suku Bangsa dan Bahasa Daerah',ic:'💬',col:'#8E5BD1',
+note:'Setiap daerah punya suku dan bahasanya sendiri. Di NTT ada suku Alor, mereka berbahasa Alor. Di Sulawesi Selatan ada suku Bugis, Makassar, dan Toraja. Bayangkan bertemu teman dari daerah lain, bagaimana cara menyapanya? Siapa yang bisa menyapa dengan bahasa daerah keluarganya? Silakan maju, kamu jadi guru bahasa kita hari ini!',
+html:`<ul class="pts"><li>Setiap provinsi punya suku dan bahasa daerah</li><li>Ketuk kotak untuk membuka suku dan bahasanya</li><li>Pola kalimat: “Di provinsi ... ada suku ... Mereka memakai bahasa ...”</li></ul>
+<div class="card" style="margin-top:12px"><div class="trow"><b>Provinsi</b><b>Suku bangsa</b><b>Bahasa daerah</b></div>
+<div class="trow"><b>Sumatera Utara</b><button class="rev">ketuk untuk membuka</button><button class="rev" data-v="Batak, Nias, Melayu">ketuk untuk membuka</button></div>
+<div class="trow"><b>Nusa Tenggara Timur</b><button class="rev">ketuk untuk membuka</button><button class="rev" data-v="sesuai sukunya">ketuk untuk membuka</button></div>
+<div class="trow" style="border:0"><b>Sulawesi Selatan</b><button class="rev">ketuk untuk membuka</button><button class="rev" data-v="sesuai sukunya">ketuk untuk membuka</button></div></div>
+<div class="card" style="margin-top:14px"><h3>Ayo, Menulis: lengkapi kalimat</h3><p class="sub" style="margin-top:8px">Di provinsi NTT ada suku <button class="blank" data-v="Alor">?</button>. Mereka memakai bahasa <button class="blank" data-v="Alor">?</button>.</p><p class="mut" style="margin:0">Sekarang tulis 2 kalimat untuk provinsi lain di bukumu.</p></div>
+<h3 style="margin:16px 0 8px">Sapaan Nusantara</h3>
+<div class="grid g3"><div class="card sapa"><div class="w">Horas!</div><button class="btn ghost" data-m="Salam sapaan dari suku Batak">Dari mana?</button><p class="mut" style="margin:6px 0 0"></p></div>
+<div class="card sapa"><div class="w">Sampurasun!</div><button class="btn ghost" data-m="Salam sapaan dari suku Sunda">Dari mana?</button><p class="mut" style="margin:6px 0 0"></p></div>
+<div class="card sapa"><div class="w">Giliranmu!</div><button class="btn acc" id="rantai">🎯 Rantai Sapa</button><p class="mut" style="margin:6px 0 0" id="rt">Siapa yang bisa menyapa dengan bahasa daerahnya?</p></div></div>`,
+init(r){
+  const data={0:['Batak Toba, Karo, Nias','Batak, Nias, Melayu'],1:['Alor, Rote, Manggarai, Sumba','sesuai sukunya'],2:['Makassar, Bugis, Toraja','sesuai sukunya']};
+  $$('.trow',r).slice(1).forEach((row,i)=>{ const bs=$$('.rev',row); bs[0].dataset.v=data[i][0]; bs.forEach(b=>b.onclick=()=>{ b.textContent=b.dataset.v; b.classList.add('open'); sfx.pop(); }); });
+  $$('.blank',r).forEach(b=>b.onclick=()=>{ b.textContent=b.dataset.v; sfx.ok(); });
+  $$('[data-m]',r).forEach(b=>b.onclick=()=>{ b.nextElementSibling.textContent=b.dataset.m; sfx.pop(); });
+  const rt=['Sapa teman di sebelah kananmu!','Sapa guru dengan bahasa daerahmu!','Sapa teman di depanmu dengan bahasa daerah apa saja!','Sapa satu kelompok sekaligus!'];
+  $('#rantai',r).onclick=()=>{ $('#rt',r).textContent=rt[rnd(rt.length)]; sfx.pop(); }; }});
+
+/* 6 */
+S.push({t:'Rumah, Pakaian, dan Tarian Daerah',ic:'🏠',col:'#8B5E3C',
+note:'Perhatikan rumah-rumah ini: Joglo, Baileo, Dulohupa, Baloy. Mengapa bentuk rumah tiap daerah berbeda? Karena disesuaikan dengan alam, cuaca, dan kebutuhan penghuninya. Pakaian tiap suku juga khas. Lalu ada Tari Saronde, Cakelele, Jaranan, dan Bonet. Sekarang giliran kalian menebak asal provinsinya, lalu kita menirukan satu gerakan tari bersama.',
+html:`<ul class="pts"><li><b>Rumah:</b> Joglo, Baileo, Dulohupa, Baloy</li><li><b>Pakaian:</b> tiap suku punya pakaian khas</li><li><b>Tarian:</b> Saronde, Cakelele, Jaranan, Bonet</li></ul>
+<div class="grid g2" style="margin-top:14px"><div class="card qbox" id="q6"></div>
+<div class="card"><h3>Gerak Tiruan 💃</h3><p class="mut" style="margin:2px 0 8px">Seluruh kelas menirukan gerakan di bawah ini.</p><div class="move" id="mv">Tekan tombol untuk mendapatkan gerakan</div><div class="row" style="margin-top:10px"><button class="btn acc" id="bMv">🎲 Gerakan baru</button></div>
+<p class="mut" style="margin:10px 0 0">Mengapa bentuk rumah berbeda-beda? Diskusikan bersama teman sebangku.</p></div></div>`,
+init(r){
+  const opts=['Jawa Timur','Maluku','Gorontalo','Kalimantan Utara','Nusa Tenggara Timur'];
+  const it=[['Rumah Joglo','Jawa Timur'],['Rumah Baileo','Maluku'],['Rumah Dulohupa','Gorontalo'],['Rumah Baloy','Kalimantan Utara'],['Tari Saronde','Gorontalo'],['Tari Cakelele','Maluku'],['Tari Jaranan','Jawa Timur'],['Tari Bonet','Nusa Tenggara Timur']].map(([n,a])=>({q:`${n.startsWith('Rumah')?'🏠':'💃'} ${n} berasal dari provinsi ...`,a,opts}));
+  quiz($('#q6',r),shuffle(it));
+  const mv=['Gerakkan kedua tangan mengalun seperti ombak 🌊','Langkahkan kaki berirama empat ketukan 👣','Tepuk tangan mengikuti irama lalu putar badan perlahan 👏','Putar pergelangan tangan perlahan sambil melangkah ke samping 🌀','Angkat kedua tangan setinggi bahu lalu ayunkan bergantian 🙌'];
+  $('#bMv',r).onclick=()=>{ $('#mv',r).textContent=mv[rnd(mv.length)]; sfx.pop(); }; }});
+
+/* 7 */
+S.push({t:'Alat Musik, Lagu, Makanan, dan Senjata',ic:'🎶',col:'#D6456F',
+note:'Sekarang kita pakai telinga, mata, dan lidah! Dengarkan musik ini. Ini bunyi sasando dari NTT, bentuknya seperti harpa dari daun lontar. Ada juga tahuri dari Maluku. Lagu daerah: Rasa Sayange, Rek Ayo Rek, Potong Bebek Angsa. Siapa yang pernah makan Sate Madura? Kita juga punya senjata tradisional seperti Mandau, tetapi ingat, itu warisan budaya, bukan mainan.',
+html:`<ul class="pts"><li><b>Alat musik:</b> Sasando (NTT), Tahuri (Maluku)</li><li><b>Lagu daerah:</b> Rasa Sayange, Rek Ayo Rek</li><li><b>Makanan:</b> Sate Madura, Se’i, Binte Buluhuta</li><li><b>Senjata:</b> Mandau, Badik: warisan budaya, bukan mainan!</li></ul>
+<div class="tabs" id="t7" style="margin-top:12px"></div><div class="ctab" id="c7"></div>
+<div class="card" style="margin-top:14px"><h3>Kuis Telinga 👂</h3><p class="mut" style="margin:2px 0 6px">Putar rekaman (atau nyanyikan/mainkan sendiri), lalu tebak asal provinsinya.</p><div id="q7" class="qbox"></div></div>`,
+init(r){
+  const cats=[['am','🎶','Alat musik'],['lg','🎤','Lagu daerah'],['mk','🍲','Makanan'],['mn','🥤','Minuman'],['sj','🛡️','Senjata']];
+  const tb=$('#t7',r), box=$('#c7',r);
+  tb.innerHTML=cats.map((c,i)=>`<button class="tab" data-i="${i}">${c[1]} ${c[2]}</button>`).join('');
+  const show=i=>{ $$('.tab',tb).forEach((b,j)=>b.classList.toggle('on',i===j)); const k=cats[i][0]; box.innerHTML=P6.map(p=>`<div class="item"><b>${BUD[p][k]}</b><span class="mut">${p}</span></div>`).join(''); };
+  $$('.tab',tb).forEach(b=>b.onclick=()=>{ show(+b.dataset.i); sfx.pop(); }); show(0);
+  const o4=a=>shuffle([a,...shuffle(P6.filter(p=>p!==a)).slice(0,3)]);
+  const items=[['Alat musik berbentuk seperti harpa dari daun lontar. Namanya Sasando.','Nusa Tenggara Timur','Sasando'],['Alat musik tiup dari cangkang kerang. Namanya Tahuri.','Maluku','Tahuri'],['Lagu daerah “Rasa Sayange”.','Maluku','Rasa Sayange'],['Lagu daerah “Rek Ayo Rek”.','Jawa Timur','Rek Ayo Rek'],['Lagu daerah “Potong Bebek Angsa”.','Nusa Tenggara Timur','Potong Bebek Angsa']].map(([q,a,k])=>({q:'Dari provinsi mana?',hint:q,a,opts:o4(a),key:k}));
+  const urls={};
+  quiz($('#q7',r),items,{extra:(ex,it)=>{ ex.innerHTML=`<div class="aud"><button class="btn acc" data-p ${urls[it.key]?'':'disabled'}>▶ Putar rekaman</button><label class="btn ghost" for="f_${it.key.replace(/\W/g,'')}">📂 Pasang rekaman</label><input type="file" accept="audio/*" id="f_${it.key.replace(/\W/g,'')}"><span class="mut">${urls[it.key]?'Rekaman siap.':'Opsional: pilih file audio dari perangkatmu.'}</span></div>`;
+    const inp=$('input',ex), pb=$('[data-p]',ex); inp.onchange=()=>{ if(inp.files[0]){ urls[it.key]=URL.createObjectURL(inp.files[0]); pb.disabled=false; $('span.mut',ex).textContent='Rekaman siap.'; } };
+    pb.onclick=()=>{ const a=new Audio(urls[it.key]); a.play(); }; }}); }});
+
+/* 8 */
+S.push({t:'Kartu Provinsi: Kenali 6 Provinsi',ic:'🃏',col:'#E8751A',
+note:'Ini enam kartu provinsi. Aku akan membuka satu petunjuk dulu. Siapa yang bisa menebak provinsinya? Kalau belum ada yang tahu, kuberi petunjuk kedua. Setiap provinsi punya tujuh jenis keragaman: makanan, minuman, senjata, rumah, tarian, alat musik, dan lagu. Daftar lengkapnya ada di kode QR halaman 96 buku. Sekarang kita bermain Siapa Aku!',
+html:`<ul class="pts"><li>Gorontalo · Maluku · Lampung · Kalimantan Utara · Jawa Timur · NTT</li><li>Tiap provinsi punya <b>7 jenis keragaman</b></li><li>Tebak provinsinya dari petunjuk!</li></ul>
+<div class="grid g3" id="pc" style="margin-top:12px"></div><div class="card hide" id="pd" style="margin-top:12px"></div>
+<div class="card" style="margin-top:14px"><h3>Siapa Aku? 🔎</h3><div id="sa"></div></div>`,
+init(r){
+  const short={'Nusa Tenggara Timur':'NTT'};
+  $('#pc',r).innerHTML=P6.map(p=>`<button class="pcard" style="background:${BUD[p].c}" data-p="${p}">${short[p]||p}<small>ketuk untuk melihat kartu</small></button>`).join('');
+  $$('.pcard',r).forEach(b=>b.onclick=()=>{ const p=b.dataset.p, d=BUD[p]; const pd=$('#pd',r); pd.classList.remove('hide'); pd.style.borderColor=d.c; pd.innerHTML=`<h3 style="color:${d.c};margin-bottom:8px">Kartu ${p}</h3><dl class="bud">${JENIS.map(([k,e,n])=>`<dt>${e} ${n}</dt><dd>${d[k]}</dd>`).join('')}</dl>`; sfx.pop(); pd.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'}); });
+  let pool=[], ans, ci, pts=0, sub=$('#sa',r);
+  function round(){ if(!pool.length) pool=shuffle(P6); ans=pool.pop(); ci=1;
+    sub.innerHTML=`<div class="row" style="justify-content:space-between"><span class="chip">Poin kelas: <b id="sp">${pts}</b></span><span class="mut">Tebakan benar di petunjuk 1 = 3 poin, 2 = 2 poin, 3 = 1 poin</span></div><div id="cl" style="margin:10px 0"></div><div class="opts" id="so"></div><div class="fb" id="sf" aria-live="polite"></div><div class="row" style="margin-top:6px"><button class="btn ghost" id="sn">Petunjuk berikutnya</button><button class="btn acc hide" id="sx">Putaran baru</button></div>`;
+    const draw=()=>{ $('#cl',sub).innerHTML=SIAPA[ans].slice(0,ci).map((c,i)=>`<div class="item" style="margin:6px 0"><span class="mut">Petunjuk ${i+1}</span><b>${c}</b></div>`).join(''); $('#sn',sub).disabled=ci>=3; };
+    draw(); $('#so',sub).innerHTML=P6.map(p=>`<button class="opt">${p}</button>`).join('');
+    $('#sn',sub).onclick=()=>{ if(ci<3){ci++;draw();sfx.pop();} };
+    $$('.opt',sub).forEach(b=>b.onclick=()=>{ if(b.textContent===ans){ const g=4-ci; pts+=g; b.classList.add('ok'); $$('.opt',sub).forEach(x=>x.disabled=true); $('#sf',sub).className='fb ok'; $('#sf',sub).textContent=`Benar! Itu ${ans}. +${g} poin`; $('#sp',sub).textContent=pts; sfx.ok(); $('#sx',sub).classList.remove('hide'); $('#sn',sub).disabled=true; }
+      else { b.classList.add('no'); b.disabled=true; $('#sf',sub).className='fb no'; $('#sf',sub).textContent='Belum tepat. Tambah petunjuk atau coba lagi!'; sfx.no(); } });
+    $('#sx',sub).onclick=round; }
+  round(); }});
+
+/* 9 */
+S.push({t:'Praktik Berpancasila: Poster Keragaman',ic:'🎨',col:'#2F80ED',
+note:'Sekarang jadilah seniman dan peneliti! Kelompokmu membuat poster keragaman budaya Indonesia. Minimal lima jenis, tulis nama budaya dan asal provinsinya. Bekerja sama itu seperti gotong royong: ada yang mencari data, menggambar, menulis, dan menyusun. Waktu kalian dua puluh lima menit, lalu presentasi satu sampai dua menit memakai kalimat pembuka dari buku.',
+html:`<ul class="pts"><li>Buat <b>poster A3</b> berkelompok</li><li>Minimal <b>5 jenis</b> keragaman budaya</li><li>Tulis nama budaya dan <b>asal provinsi</b></li><li>Bagi tugas, lalu presentasi 1–2 menit</li></ul>
+<div class="grid g4" style="margin-top:12px"><div class="card role"><div class="e">👑</div><b>Ketua</b><br><span class="mut">memimpin kelompok</span></div><div class="card role"><div class="e">📝</div><b>Pencatat</b><br><span class="mut">menulis data</span></div><div class="card role"><div class="e">🎤</div><b>Penyaji</b><br><span class="mut">presentasi poster</span></div><div class="card role"><div class="e">⏱️</div><b>Pengatur waktu</b><br><span class="mut">menjaga waktu</span></div></div>
+<div class="grid g2" style="margin-top:14px"><div class="card"><h3>Daftar cek poster</h3><p class="mut" style="margin:2px 0 8px">Centang jenis keragaman yang sudah ada di posternya.</p><div class="grid" style="gap:6px" id="ck"></div><div class="fb" id="ckf" aria-live="polite"></div></div>
+<div class="card"><h3>Waktu kerja kelompok (25 menit)</h3><div id="tm25">${timerHTML()}</div><h3 style="margin-top:14px">Presentasi 1–2 menit</h3><div class="row"><span class="chip">Pembukaan</span><span class="chip">Inti: 5 jenis</span><span class="chip">Penutup: pesan melestarikan</span></div></div></div>`,
+init(r){
+  $('#ck',r).innerHTML=JENIS.map(([k,e,n])=>`<label class="chk"><input type="checkbox"> ${e} ${n}</label>`).join('');
+  const upd=()=>{ const n=$$('#ck input:checked',r).length, f=$('#ckf',r); if(n>=5){ f.className='fb ok'; f.textContent=`✔ ${n} jenis. Poster sudah memenuhi syarat!`; } else { f.className='fb'; f.textContent=`${n} dari minimal 5 jenis`; } };
+  $$('#ck input',r).forEach(i=>i.onchange=()=>{ upd(); sfx.pop(); if($$('#ck input:checked',r).length===5&&i.checked) sfx.ok(); }); upd();
+  timer($('#tm25',r),1500); }});
+
+/* 10 */
+S.push({t:'Ayo Lestarikan! Kisah Pentas Seni',ic:'🎭',col:'#D6456F',
+note:'Tadi kita belajar banyak budaya daerah. Sekarang, bagaimana agar budaya ini tidak hilang? Mari baca kisah Yamid dan teman-temannya yang menyiapkan pentas seni untuk perayaan 17 Agustus. Saat gladi bersih, Aisyah terluka. Apakah teman-temannya meninggalkannya? Tidak! Mereka mengajaknya tetap tampil sambil duduk. Itulah gotong royong dan kepedulian.',
+html:`<ul class="pts"><li>Tari <b>Woleka</b> dari NTT</li><li>Kisah “Pentas Seni di Sekolah”: Yamid dan kawan-kawan menyiapkan pentas 17 Agustus</li><li>Sikap: <b>musyawarah, gotong royong, saling menolong, inklusif</b></li></ul>
+<div class="row" style="margin:12px 0 8px"><button class="btn acc" id="nx">Panel berikutnya ▶</button><button class="btn ghost" id="rs">Ulang</button></div>
+<div class="panels" id="pn"></div>
+<h3 style="margin:16px 0 8px">Tanya Jawab Cerita</h3><div class="grid" style="gap:8px" id="qa"></div>
+<p class="mut">Ayo, Berpendapat: deskripsikan gambar orang-orang yang melestarikan budaya di bukumu.</p>`,
+init(r){
+  const pn=[['🗣️🤝','Musyawarah','Yamid dan teman-teman bermusyawarah menyiapkan pentas 17 Agustus.'],['💃🎶','Latihan','Mereka berlatih bersama dengan semangat.'],['🤕🪑','Gladi bersih','Aisyah terluka. Teman-temannya mengajaknya tetap tampil sambil duduk.'],['🎉👏','Pentas bersama','Semua tampil bersama. Tidak ada yang tertinggal!']];
+  let n=0; const draw=()=>{ $('#pn',r).innerHTML=pn.map((p,i)=>`<div class="panel ${i<n?'':'hid'}"><div class="sc">${p[0]}</div><b>${i+1}. ${p[1]}</b><span>${p[2]}</span></div>`).join(''); };
+  draw(); $('#nx',r).onclick=()=>{ if(n<4){ n++; draw(); sfx.pop(); if(n===3) sfx.no(); if(n===4) sfx.fan(); } }; $('#rs',r).onclick=()=>{ n=0; draw(); };
+  const qa=[['1. Pentas apa yang disiapkan Yamid dan kawan-kawan?','Pentas seni untuk perayaan 17 Agustus.'],['2. Apa dua lagu daerah dalam cerita?','Lihat bacaan di buku siswa.'],['3. Apa yang terjadi saat gladi bersih?','Aisyah terluka, dan teman-temannya mengajaknya tetap tampil sambil duduk.'],['4. Bagaimana perasaanmu setelah membaca cerita ini?','Jawaban terbuka (bangga, terharu, senang, dan lainnya).'],['5. Sikap apa yang dipelajari dari cerita ini?','Musyawarah, gotong royong, saling menolong, dan inklusif.']];
+  $('#qa',r).innerHTML=qa.map(q=>`<button class="qa">${q[0]}<div class="ans">${q[1]}</div></button>`).join('');
+  $$('.qa',r).forEach(b=>b.onclick=()=>{ b.classList.toggle('open'); sfx.pop(); }); }});
+
+/* 11 */
+S.push({t:'Cara Melestarikan dan Pilihan Karyaku',ic:'🌱',col:'#2E9A5E',
+note:'Kalau kita bangga dengan budaya kita, apa yang bisa kita lakukan supaya budaya itu tidak hilang? Diskusikan dengan kelompokmu lima menit. Empat caranya: mempelajari, mempraktikkan, menampilkan, dan memperkenalkannya kepada orang lain. Kita juga menghargai budaya daerah lain: tidak mengejek, mau belajar, berterima kasih. Sekarang pilih karya dengan musyawarah: komik, buku mini, atau simulasi peran.',
+html:`<ul class="pts"><li>Cara melestarikan: <b>pelajari – praktikkan – tampilkan – perkenalkan</b></li><li>Hargai budaya lain: tidak mengejek, mau belajar, berterima kasih</li><li>Pilih karya: <b>komik 6 panel</b>, <b>buku mini</b>, atau <b>simulasi peran</b></li></ul>
+<div class="steps" id="st" style="margin-top:12px"></div>
+<h3 style="margin:16px 0 8px">Pilih karya kelompokmu (lewat musyawarah)</h3>
+<div class="grid g3" id="ky"></div><div class="card hide" id="kg" style="margin-top:12px"></div>
+<div class="card" style="margin-top:14px"><h3>Kerangka cerita</h3><div class="row"><span class="chip">Latar</span><span class="chip">Tokoh</span><span class="chip">Awal</span><span class="chip">Tengah</span><span class="chip">Akhir</span></div></div>`,
+init(r){
+  const st=[['1. Pelajari','Cari tahu tentang budaya daerahmu dari buku, keluarga, atau sanggar.','#2F80ED'],['2. Praktikkan','Coba menari, bernyanyi, memasak, atau memainkan alat musiknya.','#2E9A5E'],['3. Tampilkan','Tampilkan di pentas seni, kelas, atau acara sekolah.','#C99700'],['4. Perkenalkan','Ceritakan kepada teman dan orang lain agar budaya terus dikenal.','#D8452E']];
+  $('#st',r).innerHTML=st.map(s=>`<button class="step" style="--sb:${s[2]}">${s[0]}<span>${s[1]}</span></button>`).join('');
+  $$('.step',r).forEach(b=>b.onclick=()=>{ b.classList.toggle('open'); sfx.pop(); });
+  const ky=[['📖','Komik 6 panel','Rancang 6 panel: panel 1 pengenalan tokoh dan latar; panel 2–5 peristiwa; panel 6 pesan melestarikan budaya. Beri teks singkat tiap panel.'],['📘','Buku mini','Lipat satu kertas jadi buku kecil. Halaman depan: judul dan nama. Halaman isi: budaya daerah beserta gambar. Halaman akhir: pesan.'],['🎬','Simulasi peran','Bagi peran, tulis dialog singkat tentang cara melestarikan budaya, latihan 2 kali, lalu tampil 2–3 menit.']];
+  $('#ky',r).innerHTML=ky.map((k,i)=>`<button class="karya" data-i="${i}"><span class="e">${k[0]}</span>${k[1]}</button>`).join('');
+  $$('.karya',r).forEach(b=>b.onclick=()=>{ $$('.karya',r).forEach(x=>x.classList.toggle('on',x===b)); const k=ky[+b.dataset.i]; const g=$('#kg',r); g.classList.remove('hide'); g.innerHTML=`<h3>${k[0]} ${k[1]}</h3><p style="margin:6px 0 0">${k[2]}</p>`; sfx.ok(); }); }});
+
+/* 12 */
+S.push({t:'Pentas, Permainan, dan Refleksi',ic:'🎉',col:'#D8452E',
+note:'Inilah saatnya tampil! Tidak harus sempurna, yang penting berani dan bersungguh-sungguh. Penonton, tugas kalian bertepuk tangan dan menghargai setiap penampilan. Setelah itu kita bermain Ular Tangga Budaya dan Jelajah Nusantara. Terakhir, refleksi: isi kolom “Hal yang saya pelajari” dan nilai dirimu dengan skala satu sampai empat.',
+html:`<ul class="pts"><li><b>Pentas seni:</b> lagu daerah, tarian, atau alat musik</li><li><b>Permainan:</b> Ular Tangga Budaya dan Jelajah Nusantara</li><li><b>Refleksi:</b> “Hal yang saya pelajari”</li></ul>
+<div class="grid g4" style="margin-top:14px"><button class="card center" id="hP"><div style="font-size:2.4em">🎭</div><b>Pentas</b></button><button class="card center" id="hU"><div style="font-size:2.4em">🎲</div><b>Ular Tangga Budaya</b></button><button class="card center" id="hJ"><div style="font-size:2.4em">⛵</div><b>Jelajah Nusantara</b></button><button class="card center" id="hR"><div style="font-size:2.4em">🪞</div><b>Refleksi</b></button></div>
+<div class="card hide" id="bP" style="margin-top:14px"><h3>Urutan tampil</h3><div class="row" style="margin:8px 0"><label for="ng">Jumlah kelompok</label><input id="ng" type="number" min="2" max="10" value="6" style="width:4.5em;font:inherit;padding:6px;border-radius:10px;border:2px solid var(--line);background:var(--surf);color:var(--ink)"><button class="btn acc" id="ac">🎲 Acak urutan</button></div><div class="row" id="ur"></div><p class="mut" style="margin:10px 0 0">Siswa yang belum siap tampil bisa berperan sebagai pembawa acara, penata kostum, atau penulis naskah.</p></div>
+<div class="card hide" id="bR" style="margin-top:14px"><h3>Refleksi akhir</h3><label for="r3"><b>Hal yang saya pelajari</b></label><textarea id="r3" placeholder="Tulis di sini..."></textarea>
+<p style="margin:10px 0 6px"><b>Seberapa paham kamu hari ini?</b></p><div class="row" id="em"></div><div class="fb" id="emf"></div></div>`,
+init(r){
+  const sw=id=>{ ['bP','bR'].forEach(x=>$('#'+x,r).classList.toggle('hide',x!==id)); sfx.pop(); };
+  $('#hP',r).onclick=()=>sw('bP'); $('#hR',r).onclick=()=>sw('bR'); $('#hU',r).onclick=()=>go(12); $('#hJ',r).onclick=()=>go(13);
+  $('#ac',r).onclick=()=>{ const n=Math.max(2,Math.min(10,+$('#ng',r).value||6)); $('#ur',r).innerHTML=shuffle([...Array(n)].map((_,i)=>i+1)).map((x,i)=>`<span class="chip">${i+1}. Kelompok ${x}</span>`).join(''); sfx.fan(); };
+  const em=[['😟','Masih bingung'],['🙂','Paham sebagian'],['😀','Paham sebagian besar'],['🤩','Paham semua, bisa mengajari teman']];
+  $('#em',r).innerHTML=em.map((e,i)=>`<button class="emo" data-i="${i}" aria-label="${e[1]}">${e[0]}</button>`).join('');
+  $$('.emo',r).forEach(b=>b.onclick=()=>{ $$('.emo',r).forEach(x=>x.classList.toggle('on',x===b)); $('#emf',r).textContent=em[+b.dataset.i][1]; sfx.pop(); }); }});
+
+/* 13 Ular Tangga */
+S.push({t:'Game: Ular Tangga Budaya',ic:'🎲',col:'#2F80ED',game:true,
+note:'Lempar dadu, pion maju sesuai mata dadu. Jika berhenti di kaki tangga naik, jika di kepala ular turun. Setelah itu kelompok menjawab kartu pertanyaan. Benar maju 1 langkah, salah mundur 1 langkah. Kelompok pertama yang mencapai kotak 100 menang.',
+html:`<div id="utSetup" class="card"><h3>Berapa kelompok yang bermain?</h3><div class="row" style="margin-top:8px" id="utN"></div><p class="mut" style="margin:10px 0 0">Aturan: lempar dadu dan maju sesuai mata dadu. Tangga = naik, ular = turun. Lalu jawab kartu: <b>benar +1 langkah, salah −1 langkah</b>. Pertama sampai 100 menang.</p></div>
+<div class="gamewrap hide" id="utGame"><div><div class="board" id="board"></div></div>
+<div><div class="row" id="utT" style="margin-bottom:10px"></div><div class="card"><div class="row"><div class="dice" id="dice">🎲</div><div><b id="utWho"></b><div class="mut" id="utMsg">Tekan tombol untuk melempar dadu.</div></div></div><div class="row" style="margin-top:10px"><button class="btn acc" id="utRoll">🎲 Lempar dadu</button><button class="btn ghost" id="utReset">Mulai ulang</button></div></div>
+<div class="kcard hide" id="utCard" style="margin-top:12px"></div></div></div>`,
+init(r){
+  const L={4:14,9:31,21:42,28:84,51:67,71:91}, SN={16:6,47:26,62:19,64:60,87:24,93:73,98:78};
+  const pos=n=>{ const rr=Math.floor((n-1)/10), ix=(n-1)%10, c=rr%2===0?ix:9-ix; return {x:c*10+5,y:(9-rr)*10+5}; };
+  const cellColor=n=>{ const rr=Math.floor((n-1)/10), ix=(n-1)%10, c=rr%2===0?ix:9-ix; return (rr+c)%2?'#FFE9A8':'#FFFFFF'; };
+  let N=4, P=[], turn=0, deck=[], busy=false, over=false;
+  $('#utN',r).innerHTML=[2,3,4,5,6].map(n=>`<button class="btn" data-n="${n}">${n} kelompok</button>`).join('');
+  $$('#utN .btn',r).forEach(b=>b.onclick=()=>start(+b.dataset.n));
+  function board(){
+    let cells=''; for(let rr=9;rr>=0;rr--) for(let c=0;c<10;c++){ const n=rr%2===0?rr*10+c+1:rr*10+(9-c)+1; cells+=`<div class="cell" style="background:${cellColor(n)}">${n}</div>`; }
+    const lines=Object.entries(L).map(([a,b])=>{ const A=pos(+a),B=pos(b); return `<line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="#2E9A5E" stroke-width="2.4" stroke-linecap="round" opacity=".85"/><line x1="${A.x}" y1="${A.y}" x2="${B.x}" y2="${B.y}" stroke="#fff" stroke-width=".6" stroke-dasharray="1.5 2.2" opacity=".9"/>`; }).join('')
+      + Object.entries(SN).map(([a,b])=>{ const A=pos(+a),B=pos(b); const mx=(A.x+B.x)/2+7, my=(A.y+B.y)/2; return `<path d="M${A.x} ${A.y} Q${mx} ${my} ${B.x} ${B.y}" fill="none" stroke="#D8452E" stroke-width="2.4" stroke-linecap="round" opacity=".85"/><circle cx="${A.x}" cy="${A.y}" r="1.6" fill="#D8452E"/>`; }).join('');
+    $('#board',r).innerHTML=`<div class="cells">${cells}</div><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${lines}</svg>`+P.map((_,i)=>`<div class="pion" id="pi${i}" style="background:${TEAMC[i]}">${i+1}</div>`).join('');
+    place();
+  }
+  function place(){ const groups={}; P.forEach((p,i)=>(groups[p]=groups[p]||[]).push(i)); P.forEach((p,i)=>{ const o=pos(p), g=groups[p], k=g.indexOf(i), off=(k-(g.length-1)/2)*3.2; const el=$('#pi'+i,r); el.style.left=(o.x+off)+'%'; el.style.top=(o.y+(k%2?1.4:-1.4))+'%'; }); }
+  function teams(){ $('#utT',r).innerHTML=P.map((p,i)=>`<div class="tchip ${i===turn&&!over?'cur':''}"><i style="background:${TEAMC[i]}"></i>${i+1}. ${TEAMN[i]}: <b>${p}</b></div>`).join(''); $('#utWho',r).textContent=`Giliran kelompok ${turn+1} (${TEAMN[turn]})`; }
+  function start(n){ N=n; P=Array(N).fill(1); turn=0; over=false; busy=false; deck=shuffle(CARDS); $('#utSetup',r).classList.add('hide'); $('#utGame',r).classList.remove('hide'); $('#utCard',r).classList.add('hide'); $('#utRoll',r).disabled=false; $('#utMsg',r).textContent='Tekan tombol untuk melempar dadu.'; board(); teams(); }
+  const wait=ms=>new Promise(res=>setTimeout(res,reduce?0:ms));
+  async function land(i){ if(P[i]>=100){ P[i]=100; place(); return true; } if(L[P[i]]){ await wait(450); P[i]=L[P[i]]; place(); $('#utMsg',r).textContent='Naik tangga! 🪜'; sfx.ok(); await wait(550); } else if(SN[P[i]]){ await wait(450); P[i]=SN[P[i]]; place(); $('#utMsg',r).textContent='Turun lewat ular! 🐍'; sfx.no(); await wait(550); } return false; }
+  function win(i){ over=true; teams(); $('#utRoll',r).disabled=true; $('#utWho',r).textContent=`🏆 Kelompok ${i+1} (${TEAMN[i]}) menang!`; $('#utMsg',r).textContent='Selamat! Tepuk tangan untuk semua kelompok.'; $('#utCard',r).classList.add('hide'); sfx.fan(); }
+  $('#utRoll',r).onclick=async()=>{ if(busy||over) return; busy=true; $('#utRoll',r).disabled=true; const d=$('#dice',r); d.classList.add('roll'); sfx.dice(); await wait(450); d.classList.remove('roll'); const v=1+rnd(6); d.textContent=v; const i=turn; P[i]=Math.min(100,P[i]+v); place(); teams(); $('#utMsg',r).textContent=`Dadu: ${v}. Kelompok ${i+1} maju ke kotak ${P[i]}.`; await wait(600);
+    if(await land(i)||P[i]>=100){ win(i); busy=false; return; } teams();
+    if(!deck.length) deck=shuffle(CARDS); const c=deck.pop(); const card=$('#utCard',r); card.classList.remove('hide'); card.style.borderColor=LVC[c[0]];
+    card.innerHTML=`<span class="lvl" style="background:${LVC[c[0]]}">${c[0]}</span><p class="qtext" style="margin:8px 0">${c[1]}</p><button class="btn ghost" id="ka">Lihat jawaban</button><div class="ans hide" id="kan">${c[2]}</div><div class="row hide" id="kj" style="margin-top:10px"><button class="btn ok" id="kb">✓ Benar (+1)</button><button class="btn no" id="ks">✗ Salah (−1)</button></div>`;
+    $('#ka',r).onclick=()=>{ $('#kan',r).classList.remove('hide'); $('#kj',r).classList.remove('hide'); $('#ka',r).classList.add('hide'); sfx.pop(); };
+    const done=async delta=>{ $('#kj',r).classList.add('hide'); P[i]=Math.max(1,Math.min(100,P[i]+delta)); place(); teams(); delta>0?sfx.ok():sfx.no(); await wait(500); if(await land(i)||P[i]>=100){ win(i); busy=false; return; } turn=(turn+1)%N; card.classList.add('hide'); teams(); $('#utMsg',r).textContent='Tekan tombol untuk melempar dadu.'; $('#utRoll',r).disabled=false; busy=false; };
+    $('#kb',r).onclick=()=>done(1); $('#ks',r).onclick=()=>done(-1); };
+  $('#utReset',r).onclick=()=>{ $('#utSetup',r).classList.remove('hide'); $('#utGame',r).classList.add('hide'); };
+}});
+
+/* 14 Jelajah Nusantara */
+S.push({t:'Game: Jelajah Nusantara (Kalimantan)',ic:'⛵',col:'#E8751A',game:true,
+note:'Kita berlayar menyusuri lima kota di Pulau Kalimantan: Pontianak, Palangka Raya, Banjarmasin, Samarinda, dan Tanjung Selor. Pertanyaan makin sulit di tiap kota. Jawaban benar membuat kapalmu berlayar dan mendapat poin. Jika salah, kelompok lain boleh merebut poin. Petunjuk ekstra mengurangi 5 poin.',
+html:`<div id="jSetup" class="card"><h3>Berapa kelompok yang berlayar?</h3><div class="row" style="margin-top:8px" id="jN"></div><p class="mut" style="margin:10px 0 0">Aturan: jawab pertanyaan di kota tujuan. Benar = kapal maju + poin (10, 20, 30, 40, 50). Salah = kelompok lain boleh merebut poin, kapalmu tetap di kota itu. Petunjuk ekstra mengurangi 5 poin.</p></div>
+<div class="gamewrap hide" id="jGame"><div><svg class="map" id="jmap" viewBox="0 0 400 300" role="img" aria-label="Peta rute Pulau Kalimantan"></svg></div>
+<div><div class="row" id="jT" style="margin-bottom:10px"></div><div class="kcard" id="jCard"></div></div></div>`,
+init(r){
+  let N=4, st=[], pts=[], turn=0, hint=false, over=false;
+  $('#jN',r).innerHTML=[2,3,4,5,6].map(n=>`<button class="btn" data-n="${n}">${n} kelompok</button>`).join('');
+  $$('#jN .btn',r).forEach(b=>b.onclick=()=>start(+b.dataset.n));
+  function map(){ const route=KAL.map((k,i)=>`${i?'L':'M'}${k.x} ${k.y}`).join(' ');
+    const ships=st.map((s,i)=>{ const k=KAL[Math.min(s,4)]; const ox=(i%3-1)*14, oy=(Math.floor(i/3)*16)-22; return `<g transform="translate(${k.x+ox} ${k.y+oy})"><circle r="9" fill="${TEAMC[i]}" stroke="#fff" stroke-width="2"/><text y="4" text-anchor="middle" font-size="11" font-weight="800" fill="#fff">${s>=5?'🏁':i+1}</text></g>`; }).join('');
+    $('#jmap',r).innerHTML=`<path d="M60 130 C70 70 140 40 200 35 C250 20 320 60 340 110 C350 160 320 200 290 240 C260 280 190 285 140 255 C90 235 50 190 60 130 Z" fill="#7DC38A" stroke="#2E7A47" stroke-width="3"/><path d="${route}" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="3 8" stroke-linecap="round"/>`+KAL.map((k,i)=>`<g><circle cx="${k.x}" cy="${k.y}" r="12" fill="#fff" stroke="#E8751A" stroke-width="3"/><text x="${k.x}" y="${k.y+5}" text-anchor="middle" font-size="13" font-weight="800" fill="#B04A00">${i+1}</text><text x="${k.x}" y="${k.y+(i===4?-18:26)}" text-anchor="middle" font-size="12" font-weight="800" fill="#16204F" stroke="#fff" stroke-width="3" paint-order="stroke">${k.kota}</text></g>`).join('')+ships; }
+  function teams(){ $('#jT',r).innerHTML=st.map((s,i)=>`<div class="tchip ${i===turn&&!over?'cur':''}"><i style="background:${TEAMC[i]}"></i>${i+1}. ${TEAMN[i]}: <b>${pts[i]}</b> poin ${s>=5?'🏁':''}</div>`).join(''); }
+  function next(){ for(let k=1;k<=N;k++){ const t=(turn+k)%N; if(st[t]<5){ turn=t; return true; } } return false; }
+  function finish(){ over=true; const rank=pts.map((p,i)=>[p,i]).sort((a,b)=>b[0]-a[0]); $('#jCard',r).style.borderColor='var(--grn)'; $('#jCard',r).innerHTML=`<div class="center"><div class="big">🏆</div><h3>Semua kapal sudah tiba!</h3><p class="sub">Juara: Kelompok ${rank[0][1]+1} (${TEAMN[rank[0][1]]}) dengan ${rank[0][0]} poin</p><button class="btn" id="jAgain">Main lagi</button></div>`; sfx.fan(); $('#jAgain',r).onclick=()=>{ $('#jSetup',r).classList.remove('hide'); $('#jGame',r).classList.add('hide'); }; teams(); }
+  function ask(){ if(over) return; teams(); map(); const s=st[turn], k=KAL[s]; hint=false; const card=$('#jCard',r); card.style.borderColor=LVC[k.lv];
+    card.innerHTML=`<div class="row"><span class="lvl" style="background:${LVC[k.lv]}">Stasiun ${s+1}: ${k.lv}</span><b>Kelompok ${turn+1} (${TEAMN[turn]})</b></div><p class="mut" style="margin:6px 0 0">📍 ${k.kota}, ${k.prov}</p><p class="qtext" style="margin:8px 0">${k.q}</p><div class="row"><button class="btn ghost" id="jh">💡 Petunjuk (−5 poin)</button><button class="btn ghost" id="ja">Lihat jawaban</button></div><div class="hint hide" id="jhT">${k.h}</div><div class="ans hide" id="jaT">${k.a}</div><div class="row hide" id="jj" style="margin-top:10px"><button class="btn ok" id="jb">✓ Benar</button><button class="btn no" id="js">✗ Salah</button></div><div id="jr"></div>`;
+    $('#jh',r).onclick=()=>{ hint=true; $('#jhT',r).classList.remove('hide'); sfx.pop(); };
+    $('#ja',r).onclick=()=>{ $('#jaT',r).classList.remove('hide'); $('#jj',r).classList.remove('hide'); $('#ja',r).classList.add('hide'); sfx.pop(); };
+    $('#jb',r).onclick=()=>{ pts[turn]+=Math.max(0,(s+1)*10-(hint?5:0)); st[turn]++; sfx.ok(); teams(); map(); if(st.every(x=>x>=5)){ finish(); return; } setTimeout(()=>{ next(); ask(); },reduce?0:700); };
+    $('#js',r).onclick=()=>{ sfx.no(); $('#jj',r).classList.add('hide'); const others=st.map((_,i)=>i).filter(i=>i!==turn);
+      $('#jr',r).innerHTML=`<p style="margin:10px 0 6px"><b>Rebutan:</b> kelompok mana yang menjawab benar?</p><div class="row">${others.map(i=>`<button class="btn" style="background:${TEAMC[i]}" data-t="${i}">Kelompok ${i+1}</button>`).join('')}<button class="btn ghost" data-t="-1">Tidak ada</button></div>`;
+      $$('#jr [data-t]',r).forEach(b=>b.onclick=()=>{ const t=+b.dataset.t; if(t>=0){ pts[t]+=Math.max(0,(s+1)*10-(hint?5:0)); sfx.ok(); } if(!next()){ finish(); return; } ask(); }); }; }
+  function start(n){ N=n; st=Array(N).fill(0); pts=Array(N).fill(0); turn=0; over=false; $('#jSetup',r).classList.add('hide'); $('#jGame',r).classList.remove('hide'); ask(); }
+}});
+
+/* ===== mesin deck ===== */
+let cur=0;
+const main=$('#main');
+S.forEach((s,i)=>{ const sec=document.createElement('section'); sec.className='slide'; sec.id='s'+i; sec.style.setProperty('--sc',s.col);
+  sec.innerHTML=`<div class="stitle"><span class="sic" aria-hidden="true">${s.ic}</span><div><h1>${s.game?'':`Slide ${i+1}: `}${s.t}</h1></div></div>${s.html}`; main.append(sec); s.init&&s.init(sec); });
+const dots=$('#dots'); dots.innerHTML=S.map((s,i)=>`<button class="${s.game?'g':''}" aria-label="Slide ${i+1}: ${s.t}" data-i="${i}"></button>`).join('');
+$$('#dots button').forEach(b=>b.onclick=()=>go(+b.dataset.i));
+function go(i){ cur=Math.max(0,Math.min(S.length-1,i)); $$('.slide').forEach((el,j)=>el.classList.toggle('on',j===cur)); $$('#dots button').forEach((b,j)=>b.classList.toggle('on',j===cur));
+  $('#cnt').textContent=`${cur+1} / ${S.length}`; $('#prog').style.width=((cur+1)/S.length*100)+'%'; $('#bPrev').disabled=cur===0; $('#bNext').disabled=cur===S.length-1; $('#sheetTxt').textContent=S[cur].note; main.scrollTop=0; $$('#menuList .m').forEach((b,j)=>b.classList.toggle('on',j===cur)); }
+$('#bPrev').onclick=()=>go(cur-1); $('#bNext').onclick=()=>go(cur+1);
+document.addEventListener('keydown',e=>{ if(/INPUT|TEXTAREA/.test(e.target.tagName)) return; if(e.key==='ArrowRight'||e.key==='PageDown') go(cur+1); else if(e.key==='ArrowLeft'||e.key==='PageUp') go(cur-1); else if(e.key==='n'||e.key==='N') $('#bNote').click(); else if(e.key==='f'||e.key==='F') $('#bFs').click(); });
+$('#bNote').onclick=()=>{ const sh=$('#sheet'); sh.classList.toggle('hide'); $('#bNote').setAttribute('aria-pressed',String(!sh.classList.contains('hide'))); };
+$('#bSnd').onclick=()=>{ soundOn=!soundOn; $('#bSnd').setAttribute('aria-pressed',String(soundOn)); $('#bSnd').textContent=soundOn?'🔊':'🔇'; };
+$('#bTheme').onclick=()=>{ const root=document.documentElement; const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches; root.dataset.theme=dark?'light':'dark'; };
+$('#bFs').onclick=()=>{ try{ if(document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); }catch(e){} };
+$('#menuList').innerHTML=S.map((s,i)=>`<button class="m" data-i="${i}"><span style="font-size:1.4em">${s.ic}</span>${s.game?'Game':'Slide '+(i+1)}: ${s.t}</button>`).join('');
+$$('#menuList .m').forEach(b=>b.onclick=()=>{ go(+b.dataset.i); $('#menu').classList.add('hide'); });
+$('#bMenu').onclick=()=>$('#menu').classList.remove('hide'); $('#menuX').onclick=()=>$('#menu').classList.add('hide'); $('#menu').onclick=e=>{ if(e.target.id==='menu') $('#menu').classList.add('hide'); };
+go(0);
+</script>
+</body>
+</html>
